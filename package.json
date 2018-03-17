@@ -7,7 +7,7 @@
     "solander": "bin/solander.js"
   },
   "scripts": {
-    "build": "mkdirp dist && cp src/index.js dist/solander.js",
+    "build": "mkdirp dist/lib && cp src/index.js dist/solander.js && cp lib/ntc.js dist/lib/ntc.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
