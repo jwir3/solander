@@ -1,0 +1,33 @@
+{
+  "name": "solander",
+  "version": "1.0.0",
+  "description": "A color naming utility based off of Name That Color, By Chirag Mehta.",
+  "main": "dist/index.js",
+  "bin": {
+    "solander": "bin/solander.js"
+  },
+  "scripts": {
+    "build": "mkdirp dist && cp src/index.js dist/solander.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwir3/solander.git"
+  },
+  "keywords": [
+    "color",
+    "colour",
+    "name",
+    "identifier",
+    "utility"
+  ],
+  "author": "Scott Johnson",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/jwir3/solander/issues"
+  },
+  "homepage": "https://github.com/jwir3/solander#readme",
+  "dependencies": {
+    "mkdirp": "^0.5.1"
+  }
+}
