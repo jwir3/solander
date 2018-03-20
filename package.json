@@ -1,6 +1,6 @@
 {
   "name": "solander",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A color naming utility based off of Name That Color, By Chirag Mehta.",
   "main": "dist/index.js",
   "bin": {
