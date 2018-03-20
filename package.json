@@ -28,6 +28,8 @@
   },
   "homepage": "https://github.com/jwir3/solander#readme",
   "dependencies": {
+    "command-line-args": "^5.0.2",
+    "command-line-usage": "^5.0.3",
     "mkdirp": "^0.5.1"
   }
 }
