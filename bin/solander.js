@@ -47,6 +47,7 @@ const options = commandLineArgs(optionDefinitions);
 const usage = commandLineUsage(sections);
 
 if (isEmpty(options) || options.help) {
+  console.log(usage);
   return 0;
 }
 
