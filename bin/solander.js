@@ -15,8 +15,15 @@ const optionDefinitions = [
     defaultOption: true
   },
   {
+    name: 'onlyName',
+    alias: 'n',
+    description: 'Print only the color name and no other output.',
+    type: Boolean
+  },
+  {
     name: 'help',
     alias: 'h',
+    type: Boolean,
     description: 'Display this usage guide'
   }
 ];
@@ -28,7 +35,7 @@ const sections = [
   },
   {
     header: 'Typical Usage',
-    content: 'solander <color>'
+    content: 'solander [-n] <color>'
   },
   {
     header: 'Options',
@@ -39,13 +46,13 @@ const sections = [
 const options = commandLineArgs(optionDefinitions);
 const usage = commandLineUsage(sections);
 
-if (isEmpty(options) || options.hasOwnProperty('help')) {
-  console.log(usage);
+if (isEmpty(options) || options.help) {
   return 0;
 }
 
-let solander = new Solander([options['color']]);
-console.log('Color Name: ' + solander.colorName);
+let solander = new Solander([options.color]);
+let prefix = options.onlyName ? '' : 'Color Name: ';
+console.log(prefix + solander.colorName);
 
 function isEmpty(opts) {
   for (var key in opts) {
